@@ -10,6 +10,6 @@ while true; do
       exit
     elif ! [[ $line == "+" || $line == "*" ||  $line =~ $number_regex ]]; then
       echo "Error: invalid input $line"
-      exit
+      exit 1
     fi
 done

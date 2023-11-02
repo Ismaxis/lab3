@@ -21,14 +21,15 @@ while true; do
       echo $val
     else
       echo "Error: unknown mode $mode"
-      exit
+      exit 1
     fi
   else
     if [[ $line == "QUIT" ]]; then
       echo "Quit..."
+      exit
     else
       echo "Error: invalid input $line"
+      exit 1
     fi
-    exit
   fi
 done
